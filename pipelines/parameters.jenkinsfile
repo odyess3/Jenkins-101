@@ -30,11 +30,10 @@ pipeline
             }
 
         }
-    }
-    stages{
-        stage{
-            input{
-                message "What should you type?"
+
+        stage("Example"){
+            stage{
+                input message: "What should you type?"
                 
             }
         }
