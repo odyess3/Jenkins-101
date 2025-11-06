@@ -15,7 +15,7 @@ pipeline
 
                 echo "cloning files from branch: "+branchName
                 dir("build"){
-                    credentialsId: gitCredentials, url: repoUrl
+                    git branch: branchName, credentialsId: gitCredentials, url: repoUrl
                 }
             }
         }
