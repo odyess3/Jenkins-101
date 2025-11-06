@@ -30,7 +30,7 @@ pipeline
                     echo "whats the password ${params.PASSWORD}"
                     """
 
-                     input message: "What should you type?"
+                    input message: "What should you type?"
                 
                 }
             }
