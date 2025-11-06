@@ -14,25 +14,22 @@ pipeline
     }
 
     stages {
-        parallel
-        {
-            stage ("Setup parameters") {
-                steps {
-                    sh """ #!/bin/bash
-                    echo "Hello, ${params.PERSON}"
+        stage ("Setup parameters") {
+            steps {
+                sh """ #!/bin/bash
+                echo "Hello, ${params.PERSON}"
 
-                    echo "Subject: ${params.BIOGRAPHY}"
+                echo "Subject: ${params.BIOGRAPHY}"
 
-                    echo "The button is on: ${params.TOGGLE}"
+                echo "The button is on: ${params.TOGGLE}"
 
-                    echo "Which option did you pick? ${params.CHOICE}"
+                echo "Which option did you pick? ${params.CHOICE}"
 
-                    echo "whats the password ${params.PASSWORD}"
-                    """
+                echo "whats the password ${params.PASSWORD}"
+                """
 
-                    input message: "What should you type?"
+                input message: "What should you type?"
                 
-                }
             }
         }
     }
