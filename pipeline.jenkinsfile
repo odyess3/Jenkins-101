@@ -8,7 +8,7 @@ pipeline
                 echo "start"
                 sleep 20s
             }
-            step{
+            stage("20 sec later"){
                 echo "20 secounds later"
             }
         }
