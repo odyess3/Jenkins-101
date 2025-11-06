@@ -30,8 +30,9 @@ pipeline
             }
 
         }
-
-        stage("Example"){
+    }
+    stages{
+        stage{
             input{
                 message "What should you type?"
                 
