@@ -1,5 +1,5 @@
 String branchName = env.main
-String gitCredentials = "CREDENTIAL_ID"
+String gitCredentials = "basic_credits"
 String repoUrl = "https://github.com/odyess3/Jenkins-101.git"
 
 
