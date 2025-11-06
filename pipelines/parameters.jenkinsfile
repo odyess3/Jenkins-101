@@ -29,14 +29,10 @@ pipeline
 
                     echo "whats the password ${params.PASSWORD}"
                     """
-                }
-            }
-        }
 
-        stage("Example"){
-            stage{
-                input message: "What should you type?"
+                     input message: "What should you type?"
                 
+                }
             }
         }
     }
