@@ -18,7 +18,7 @@ pipeline
             steps{
                 sh """ #!/bin/bash
                 echo "5 secounds later"
-                sleep 5s
+                sleep 25s
                 """
             }
         }
