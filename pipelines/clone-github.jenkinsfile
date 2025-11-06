@@ -3,15 +3,10 @@ pipeline
     agent any
 
     stages { 
-        stage ("Challenge hello world") {
-
+        stage ("Clone a repo") {
             steps {
-                sh """ #!/bin/bash
-                echo "Hello, Jenkins!"
-                
-                """
+                git credentialsId: "basic_credits", url: "https://github.com/odyess3/Java.git"
             }
-
         }
     }
 }
