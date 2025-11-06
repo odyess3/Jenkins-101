@@ -1,3 +1,8 @@
+String branchName = env.main
+String gitCredentials = "CREDENTIAL_ID"
+String repoUrl = "https://github.com/odyess3/Jenkins-101.git"
+
+
 pipeline
 {
     agent any
@@ -5,7 +10,13 @@ pipeline
     stages { 
         stage ("Clone a repo") {
             steps {
-                git credentialsId: "basic_credits", url: "https://github.com/odyess3/Jenkins-101.git"
+                echo "making the directortory"
+                sh "mkdir -p build"
+
+                echo "cloning files from branch: "+branchName
+                dir("build"){
+                    git branch: branchName, credentialsId: gitCredentials, url: repoUrl
+                }
             }
         }
     }
