@@ -5,10 +5,18 @@ pipeline
     stages {
         stage ("1") {
             steps {
-                sh """
+                sh """ #!/bin/bash
                 echo "start"
-                sleep 20s"""
+                sleep 20s
+                """
             }
         }
     }
 }
+
+  /*stage("20 sec later"){
+                steps{
+                    echo "20 secounds later"
+
+                }
+            }*/
