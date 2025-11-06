@@ -5,7 +5,7 @@ pipeline
     stages { 
         stage ("Clone a repo") {
             steps {
-                git credentialsId: "basic_credits", url: "https://github.com/odyess3/Java.git"
+                git credentialsId: "basic_credits", url: "https://github.com/odyess3/Jenkins-101.git"
             }
         }
     }
