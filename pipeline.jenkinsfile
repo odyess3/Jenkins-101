@@ -3,17 +3,11 @@ pipeline
     agent any
 
     stages {
-        stage ("Hello") {
+        stage ("1") {
             steps {
+                sh """
                 echo "start"
-                sleep 20s
-            }
-            
-            stage("20 sec later"){
-                steps{
-                    echo "20 secounds later"
-
-                }
+                sleep 20s"""
             }
         }
     }
