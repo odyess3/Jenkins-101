@@ -5,7 +5,11 @@ pipeline
     stages {
         stage ("Hello") {
             steps {
-                echo "hello World"
+                echo "start"
+                sleep 20s
+            }
+            step{
+                echo "20 secounds later"
             }
         }
     }
