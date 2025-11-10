@@ -5,11 +5,15 @@ pipeline
     stages { 
         stage ("Clone a repo") {
             steps {
-                git(
-                    branch: "main",
-                    credentialsId: "2d8fc68f-1087-431e-939b-87683e9a7da7",
-                    url: "https://github.com/odyess3/Python.git"
-                )
+                script{
+                    echo "Cloning the repo"
+                    git(
+                        branch: "main",
+                        credentialsId: "2d8fc68f-1087-431e-939b-87683e9a7da7",
+                        url: "https://github.com/odyess3/Python.git"
+                    )
+                }
+               
             }
         }
     }
