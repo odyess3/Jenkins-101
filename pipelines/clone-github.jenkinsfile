@@ -11,10 +11,9 @@ pipeline
         stage ("Clone a repo") {
             steps {
                 script{
-                    git credentialsId: "2d8fc68f-1087-431e-939b-87683e9a7da7", url: "https://github.com/odyess3/Python.git", git branch: "main"
-
-                    sh "git checkout main"
-                    
+                    git branch: "main",
+                    git credentialsId: "2d8fc68f-1087-431e-939b-87683e9a7da7",
+                    url: "https://github.com/odyess3/Python.git"
                 }
             }
         }
