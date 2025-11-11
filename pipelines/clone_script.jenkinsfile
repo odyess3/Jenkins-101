@@ -19,10 +19,10 @@ pipeline
         stage("Python script"){
             steps{
                 script{
-                    sh """
-                    echo "Installing Python"
-                    python3 --version 
-                    """
+                    // sh """
+                    // echo "Installing Python"
+                    // python3 --version 
+                    // """
                 }
             }
         }
