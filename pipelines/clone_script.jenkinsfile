@@ -13,6 +13,14 @@ pipeline
                 )
             }
         }
+        stage("Python Installation"){
+            steps{
+                sh"""
+                python3 --version
+                """
+            }
+        }
+
         stage("Python script"){
             steps{
                 sh """
