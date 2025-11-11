@@ -17,7 +17,7 @@ pipeline
             steps{
                 
                 shell """
-                echo "Installing Python"
+                    echo "Installing Python"
                 """
             }
         }
