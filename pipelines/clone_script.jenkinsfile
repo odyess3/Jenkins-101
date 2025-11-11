@@ -16,7 +16,7 @@ pipeline
         stage("Python script"){
             steps{
                 
-                sh """
+                ksh """
                 echo "Installing Python"
                 """
             }
