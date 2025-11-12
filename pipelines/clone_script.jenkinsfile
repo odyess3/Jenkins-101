@@ -13,23 +13,12 @@ pipeline
                 )
             }
         }
-        stage("Python Installation"){
+        stage("Python script"){
             steps{
                 sh"""
                 cd /
                 cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
                 python3 main.py
-                """
-            }
-        }
-        stage("Python script"){
-            steps{
-                sh """
-                    echo "Installing Python"
-                    pyhon3 -m venv venv
-                    source venv/bin/activate
-                    pip install -r requirements.txt
-                    
                 """
             }
         }
