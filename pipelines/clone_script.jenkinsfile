@@ -16,8 +16,9 @@ pipeline
         stage("Python Installation"){
             steps{
                 sh"""
-                python3 --version
-                pip3 install -r requirements.txt
+                cd /
+                cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
+                python3 main.py
                 """
             }
         }
