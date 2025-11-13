@@ -1,4 +1,11 @@
-parameters{
+
+
+
+pipeline
+{
+    agent any
+    
+    parameters{
     string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
     text(name: 'TEXT', defaultValue: '', description: 'Enter some information about the person')
@@ -9,13 +16,8 @@ parameters{
 
     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
 
-}
+    }
 
-
-
-pipeline
-{
-    agent any
 
     stages { 
         stage("Python script"){
