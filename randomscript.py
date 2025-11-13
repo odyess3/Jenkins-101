@@ -1,2 +1,5 @@
-print("Hello Word")
-print("this is just random stuff")
+print("Hello ${params.NAME}")
+print("this is just random stuff here a text \n ${params.TEXT}")
+print ("The toggle of this value is ${params.BOOLEAN}")
+print("Your choice is ${params.CHOICE}")
+print("Finally the password is ${params.PASSWORD}")

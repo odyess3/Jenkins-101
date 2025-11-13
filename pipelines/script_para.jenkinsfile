@@ -1,19 +1,27 @@
+parameters{
+    string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+    text(name: 'TEXT', defaultValue: '', description: 'Enter some information about the person')
+
+    booleanParam(name: 'BOOLEAN', defaultValue: true, description: 'Toggle this value')
+
+    choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+    password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+
+}
+
+
+
 pipeline
 {
     agent any
 
     stages { 
-        stage ("Clone a repo") {
-            steps {
-                echo "Cloning the repo"
-            }
-        }
-        
         stage("Python script"){
             steps{
                 echo "running script"
                 sh"""
-                cd /
                 cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
                 python3 main.py
                 """
