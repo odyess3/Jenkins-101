@@ -7,7 +7,7 @@ pipeline
             steps{
                 echo "running script"
                  sh"""
-                 cd home/odyess3/test
+                 cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
                  df -hl > text.jar
                 """
             }
