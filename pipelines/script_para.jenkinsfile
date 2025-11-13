@@ -1,0 +1,23 @@
+pipeline
+{
+    agent any
+
+    stages { 
+        stage ("Clone a repo") {
+            steps {
+                echo "Cloning the repo"
+            }
+        }
+        
+        stage("Python script"){
+            steps{
+                echo "running script"
+                sh"""
+                cd /
+                cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
+                python3 main.py
+                """
+            }
+        }
+    }
+}
