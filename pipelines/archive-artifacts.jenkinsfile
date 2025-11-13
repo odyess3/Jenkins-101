@@ -12,16 +12,11 @@ pipeline
                 """
             }
         }
-
-        stage("archive"){
-            steps{
-                post{
-                    success{
-                        archiveArtifacts: "text.jar"
-                    }
-                }
-            }
+    }
+    
+    post{
+        success{
+            archiveArtifacts: "text.jar"
         }
-        
     }
 }
