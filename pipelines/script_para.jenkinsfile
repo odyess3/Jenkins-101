@@ -1,13 +1,10 @@
-
-
-
 pipeline
 {
     agent any
     
     parameters{
     string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-
+    
     text(name: 'TEXT', defaultValue: '', description: 'Enter some information about the person')
 
     booleanParam(name: 'BOOLEAN', defaultValue: true, description: 'Toggle this value')
@@ -15,9 +12,7 @@ pipeline
     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-
     }
-
 
     stages { 
         stage("Python script"){

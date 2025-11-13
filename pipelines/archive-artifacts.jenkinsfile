@@ -1,0 +1,22 @@
+pipeline
+{
+    agent any
+
+    stages { 
+        stage(" script"){
+            steps{
+                echo "running script"
+                 sh"""
+                 cd ~/test
+                 df -hl > text.jar
+                """
+            }
+        }
+
+        post{
+            success{
+                archiveArtifacts: "text.jar"
+            }
+        }
+    }
+}
