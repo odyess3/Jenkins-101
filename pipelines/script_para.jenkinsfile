@@ -23,9 +23,9 @@ pipeline
         stage("Python script"){
             steps{
                 echo "running script"
-                sh"""
+                 sh"""
                 cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
-                python3 randomscript.py
+                python3 randomscript.py '${params.NAME}'
                 """
             }
         }
