@@ -13,10 +13,15 @@ pipeline
             }
         }
 
-        post{
-            success{
-                archiveArtifacts: "text.jar"
+        stage("archive"){
+            steps{
+                post{
+                    success{
+                        archiveArtifacts: "text.jar"
+                    }
+                }
             }
         }
+        
     }
 }
