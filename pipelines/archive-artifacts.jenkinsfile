@@ -7,12 +7,16 @@ pipeline
             steps{
                 echo "running script"
                  sh"""
-                 cd ~/test
+                 cd home/odyess3/test
                  df -hl > text.jar
                 """
             }
         }
     }
 
-   
+    post{
+        success{
+            archiveArtifacts artifacts: "text.jar"
+        }
+    }
 }
