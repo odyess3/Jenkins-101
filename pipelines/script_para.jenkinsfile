@@ -22,8 +22,8 @@ pipeline
             steps{
                 echo "running script"
                 sh"""
-                cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
-                python3 main.py
+                cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
+                python3 randomscript.py
                 """
             }
         }
