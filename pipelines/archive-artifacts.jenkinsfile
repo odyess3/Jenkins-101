@@ -13,10 +13,10 @@ pipeline
             }
         }
     }
-    
+
     post{
         success{
-            archiveArtifacts: "text.jar"
+            archiveArtifacts artifacts: "text.jar"
         }
     }
 }
