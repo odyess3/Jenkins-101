@@ -11,7 +11,7 @@ pipeline
                  sh"""
                 
                  echo "Current workspace path:" 
-                 pwd() 
+                 pwd
                  df -hl > text.jar
                 """
             }
