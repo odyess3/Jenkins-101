@@ -18,7 +18,7 @@ pipeline
             steps{
                 echo "running script"
                 sh"""
-                cd /var/lib/jenkins/jobs/Easy Challenges/jobs/clone-script
+                cd /var/lib/jenkins/jobs/Easy\ Challenges/jobs/clone-script
                 #cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
                 python3 main.py
                 """
