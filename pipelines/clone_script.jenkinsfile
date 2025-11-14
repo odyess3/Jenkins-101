@@ -18,9 +18,9 @@ pipeline
             steps{
                 echo "running script"
                 sh"""
-                cd /
-                cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
-                python3 main.py
+                cd /var/lib/jenkins/jobs/clone_script
+                #cd /mnt/c/Users/260004669/Documents/GitHub/Python/Day_17
+                #python3 main.py
                 """
             }
         }

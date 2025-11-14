@@ -8,6 +8,7 @@ pipeline
                 echo "running script"
                  sh"""
                  cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
+                 
                  df -hl > text.jar
                 """
             }
