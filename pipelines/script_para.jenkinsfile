@@ -26,7 +26,8 @@ pipeline
                     url: "https://github.com/odyess3/Python.git"
                 )
             }
-
+        }
+        
         stage("Python script"){
             steps{
                 echo "running script"
