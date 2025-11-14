@@ -32,7 +32,7 @@ pipeline
             steps{
                 echo "running script"
                  sh"""
-                    python3 /var/lib/jenkins/workspace/Medium-Challenges/script-para/Day_17/randomscript.py/ '${params.NAME}' '${params.TEXT}' '${params.BOOLEAN}' '${params.CHOICE}' '${params.PASSWORD}' 
+                    python3 /var/lib/jenkins/workspace/Medium-Challenges/script-para/Day_17/randomscript.py '${params.NAME}' '${params.TEXT}' '${params.BOOLEAN}' '${params.CHOICE}' '${params.PASSWORD}' 
                 """
             }
         }
