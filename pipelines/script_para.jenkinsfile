@@ -4,7 +4,7 @@ pipeline
     
     parameters{
     string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-    
+
     text(name: 'TEXT', defaultValue: '', description: 'Enter some information about the person')
 
     booleanParam(name: 'BOOLEAN', defaultValue: true, description: 'Toggle this value')
@@ -14,13 +14,24 @@ pipeline
     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
+
+
     stages { 
+        stage ("Clone a repo") {
+            steps {
+                echo "Cloning the repo"
+                git(
+                    branch: "main",
+                    credentialsId: "2d8fc68f-1087-431e-939b-87683e9a7da7",
+                    url: "https://github.com/odyess3/Python.git"
+                )
+            }
+
         stage("Python script"){
             steps{
                 echo "running script"
                  sh"""
-                cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
-                python3 randomscript.py '${params.NAME}' '${params.TEXT}' '${params.BOOLEAN}' '${params.CHOICE}' '${params.PASSWORD}' 
+                    python3 /var/lib/jenkins/workspace/medium-Challenges/script-para/randomscript.py/ '${params.NAME}' '${params.TEXT}' '${params.BOOLEAN}' '${params.CHOICE}' '${params.PASSWORD}' 
                 """
             }
         }
