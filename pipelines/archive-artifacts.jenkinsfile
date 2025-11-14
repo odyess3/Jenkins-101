@@ -6,8 +6,9 @@ pipeline
         stage(" script"){
             steps{
                 echo "running script"
+                def currentPath = pwd()
+                echo "Current workspace path: ${currentPath}"
                  sh"""
-                 cd /mnt/c/Users/260004669/Documents/GitHub/Jenkins-101
                  
                  df -hl > text.jar
                 """
