@@ -9,8 +9,9 @@ pipeline
 
                
                  sh"""
-                 def currentPath = pwd()
-                 echo "Current workspace path: ${currentPath}"
+                
+                 echo "Current workspace path:" 
+                 pwd() 
                  df -hl > text.jar
                 """
             }
